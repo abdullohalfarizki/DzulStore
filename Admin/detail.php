@@ -1,11 +1,21 @@
-<h1>detail</h1>
 <?php
 $ambil = $conn->query("SELECT * FROM pembelian JOIN pelanggan 
     ON pembelian.id_pelanggan = pelanggan.id_pelanggan
     WHERE pembelian.id_pembelian = '$_GET[id]'");
 $detail = $ambil->fetch_assoc();
 ?>
-<pre><?php print_r($detail) ?></pre>
+
+<!-- <pre><?php print_r($detail) ?></pre> -->
+
+<p><?php echo $detail['nama_pelanggan']; ?></p>
+
+<p>Telpon : <?php echo $detail['telp_pelanggan']; ?><br>
+    Email : <?php echo $detail['email_pelanggan']; ?></br>
+
+<p>Tanggal : <?php echo $detail['tgl_pembelian']; ?><br>
+    Total : <?php echo $detail['total_pembelian']; ?>
+</p>
+
 
 <div class="row">
     <div class="col-12">
@@ -46,7 +56,7 @@ $detail = $ambil->fetch_assoc();
                             <tr>
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo $data['nama_produk'] ?></td>
-                                <td><?php echo number_format($data['harga_produk']) ?></td>
+                                <td>Rp. <?php echo number_format($data['harga_produk']) ?></td>
                                 <td> <?php echo $data['jumlah']; ?></td>
                                 <td>Rp. <?php echo number_format($data['harga_produk'] * $data['jumlah']) ?></td>
                             </tr>
