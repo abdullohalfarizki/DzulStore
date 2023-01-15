@@ -1,2 +1,3 @@
 # dzul-store
-Membuat web ecommerce sederhana
+
+Membuat web ecommerce sederhana mengguakan PHP MySQL

@@ -1,40 +1,20 @@
-<?php include 'header.php' ?>
-
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <div class="content-header">
-    <div class="container-fluid">
-
-      <?php
-      if (isset($_GET['halaman'])) {
-        if ($_GET['halaman'] == "home") {
-          include 'home.php';
-        } elseif ($_GET['halaman'] == "produk") {
-          include 'produk.php';
-        } elseif ($_GET['halaman'] == "pelanggan") {
-          include 'pelanggan.php';
-        } elseif ($_GET['halaman'] == "pembeli") {
-          include 'pembelian.php';
-        } elseif ($_GET['halaman'] == "detail") {
-          include 'detail.php';
-        } elseif ($_GET['halaman'] == "logout") {
-          include 'logout.php';
-        }
-      } else {
-        include 'home.php';
-      }
-
-      ?>
-
-    </div><!-- /.container-fluid -->
-  </div>
-
-  <!-- /.content-header -->
-
-  <!-- Main content -->
-
-
-
-  <!-- /.content -->
-  <?php include 'footer.php' ?>
+<?php
+if (isset($_GET['x']) && $_GET['x'] == 'Home') {
+    $page = "Home.php";
+    include "Main.php";
+} elseif (isset($_GET['x']) && $_GET['x'] == 'Produk') {
+    $page = "Produk.php";
+    include "Main.php";
+} elseif (isset($_GET['x']) && $_GET['x'] == 'KategoriProduk') {
+    $page = "KategoriProduk.php";
+    include "Main.php";
+} elseif (isset($_GET['x']) && $_GET['x'] == 'Pembelian') {
+    $page = "Pembelian.php";
+    include "Main.php";
+} elseif (isset($_GET['x']) && $_GET['x'] == 'Pelanggan') {
+    $page = "Pelanggan.php";
+    include "Main.php";
+} else {
+    $page = "Home.php";
+    include "Main.php";
+}
