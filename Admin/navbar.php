@@ -26,18 +26,42 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-        <!-- Notifications Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="fas fa-american-sign-language-interpreting "></i>
+        <li class="nav-item dropdown user-menu">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <img src="../Template/dist/img/user2-160x160.jpg" class="user-image img-circle elevation-2" alt="User Image">
+                <span class="d-none d-md-inline">Alexander Pierce</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fas fa-envelope mr-2"></i> 4 new messages
-                </a>
-            </div>
-        </li>
+            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right mt-2">
+                <!-- User image -->
+                <li class="user-header bg-navy">
+                    <img src="../Template/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
 
+                    <p>
+                        Alexander Pierce - Web Developer
+                        <small>Member since Nov. 2012</small>
+                    </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <a href="#">Followers</a>
+                        </div>
+                        <div class="col-4 text-center">
+                            <a href="#">Sales</a>
+                        </div>
+                        <div class="col-4 text-center">
+                            <a href="#">Friends</a>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                    <a href="#" class="btn btn-outline-primary">Profile</a>
+                    <a href="#" class="btn btn-outline-danger float-right">Sign out</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>

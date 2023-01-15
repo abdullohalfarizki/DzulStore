@@ -1,14 +1,4 @@
 <div class="sidebar">
-    <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-            <img src="../Template/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-            <a href="." class="d-block">Dzul Abdull</a>
-        </div>
-    </div>
-
     <!-- Sidebar Menu -->
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -60,15 +50,6 @@
                     </p>
                 </a>
             </li>
-            <li class="nav-item has-treeview menu-open">
-                <a href="logout" class="nav-link <?= ((isset($_GET['x']) && $_GET['x'] == 'logout')) ? 'active link-light bg-navy' : 'link-dark'; ?>">
-                    <i class="nav-icon fas fa-sign"></i>
-                    <p>
-                        Logout
-                    </p>
-                </a>
-            </li>
-
         </ul>
     </nav>
     <!-- /.sidebar-menu -->
